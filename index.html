@@ -1,15 +1,85 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>CoffeeArena</title>
+    <title>Java Bean Oasis - Premium Coffee Experience</title>
     <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
 </head>
-
 <body>
-    <h1>CoffeeArena</h1>
-</body>
+    <header>
+        <nav>
+            <div class="logo">Java Bean Oasis</div>
+            <ul class="nav-links">
+                <li><a href="#hero">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#menu">Menu</a></li>
+                <li><a href="#location">Location</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
 
+    <section id="hero" class="hero">
+        <div class="hero-content">
+            <h1>Welcome to Java Bean Oasis</h1>
+            <p>Where every sip tells a story of quality and passion</p>
+            <button class="cta-button">Discover Our Coffee</button>
+        </div>
+    </section>
+
+    <section id="about" class="about">
+        <h2>About Us</h2>
+        <div class="about-content">
+            <img src="coffee-shop.jpg" alt="Coffee Shop Interior">
+            <p>We’re passionate about crafting exceptional coffee experiences. Using sustainably sourced beans and artisanal brewing methods, Java Bean Oasis is your haven for premium coffee in a warm, inviting atmosphere.</p>
+        </div>
+    </section>
+
+    <section id="menu" class="menu">
+        <h2>Our Menu</h2>
+        <div class="menu-grid">
+            <div class="menu-item">
+                <img src="espresso.jpg" alt="Espresso">
+                <h3>Espresso</h3>
+                <p>Rich, bold, and perfectly extracted</p>
+            </div>
+            <div class="menu-item">
+                <img src="latte.jpg" alt="Latte">
+                <h3>Latte</h3>
+                <p>Smooth espresso with velvety milk</p>
+            </div>
+            <div class="menu-item">
+                <img src="cappuccino.jpg" alt="Cappuccino">
+                <h3>Cappuccino</h3>
+                <p>Balanced espresso, milk, and foam</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="location" class="location">
+        <h2>Visit Us</h2>
+        <div class="location-content">
+            <div class="map-placeholder">Map Placeholder</div>
+            <div class="location-info">
+                <p>123 Coffee Lane<br>Bean Town, CA 90210<br>Mon-Sat: 7AM - 6PM<br>Sun: 8AM - 4PM</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact" class="contact">
+        <h2>Contact Us</h2>
+        <form>
+            <input type="text" placeholder="Name" required>
+            <input type="email" placeholder="Email" required>
+            <textarea placeholder="Message" required></textarea>
+            <button type="submit" class="cta-button">Send Message</button>
+        </form>
+    </section>
+
+    <footer>
+        <p>© 2025 Java Bean Oasis. All Rights Reserved.</p>
+    </footer>
+</body>
 </html>

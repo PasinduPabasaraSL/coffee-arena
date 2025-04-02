@@ -1,3 +1,271 @@
+:root {
+    /* HSL Colors */
+    --background: hsl(30, 33%, 98%);
+    --foreground: hsl(30, 10%, 15%);
+    --card: hsl(30, 33%, 98%);
+    --card-foreground: hsl(30, 10%, 15%);
+    --popover: hsl(30, 33%, 98%);
+    --popover-foreground: hsl(30, 10%, 15%);
+    --primary: hsl(25, 34%, 17%);
+    --primary-foreground: hsl(30, 33%, 98%);
+    --secondary: hsl(30, 15%, 93%);
+    --secondary-foreground: hsl(30, 10%, 15%);
+    --muted: hsl(30, 15%, 93%);
+    --muted-foreground: hsl(30, 10%, 40%);
+    --accent: hsl(30, 30%, 82%);
+    --accent-foreground: hsl(30, 10%, 15%);
+    --destructive: hsl(0, 84.2%, 60.2%);
+    --destructive-foreground: hsl(30, 33%, 98%);
+    --border: hsl(30, 15%, 90%);
+    --input: hsl(30, 15%, 90%);
+    --ring: hsl(30, 75%, 60%);
+    /* Coffee-specific HEX Colors */
+    --coffee-dark: #3A2618;
+    --coffee-medium: #6F4E37;
+    --coffee-light: #B38867;
+    --coffee-cream: #F5F1E8;
+    --coffee-accent: #D4A675;
+}
+
 * {
-    padding: 0px;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: var(--background);
+    color: var(--foreground);
+    line-height: 1.6;
+    font-family: 'Poppins', sans-serif;
+}
+
+/* Navigation */
+header {
+    position: fixed;
+    width: 100%;
+    background-color: var(--primary);
+    padding: 1rem 2rem;
+    z-index: 100;
+}
+
+nav {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    color: var(--primary-foreground);
+    font-family: 'Playfair Display', serif;
+    font-size: 1.8rem;
+    font-weight: 600;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 2rem;
+}
+
+.nav-links a {
+    color: var(--primary-foreground);
+    text-decoration: none;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 400;
+    transition: color 0.3s ease;
+}
+
+.nav-links a:hover {
+    color: var(--coffee-accent);
+}
+
+/* Hero */
+.hero {
+    height: 100vh;
+    background: linear-gradient(rgba(37, 52, 23, 0.7), rgba(37, 52, 23, 0.7)),
+                url('Assets/bg.avif') center/cover no-repeat;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: var(--primary-foreground);
+}
+
+.hero-content h1 {
+    font-family: 'Playfair Display', serif;
+    font-size: 3.5rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+}
+
+.hero-content p {
+    font-size: 1.2rem;
+    margin-bottom: 2rem;
+    max-width: 600px;
+}
+
+.cta-button {
+    background-color: var(--coffee-accent);
+    color: var(--accent-foreground);
+    padding: 1rem 2rem;
+    border: none;
+    border-radius: 25px;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 500;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
+.cta-button:hover {
+    transform: scale(1.05);
+}
+
+/* About */
+.about {
+    padding: 5rem 2rem;
+    background-color: var(--coffee-medium);
+    color: var(--primary-foreground);
+}
+
+.about h2, .menu h2, .location h2, .contact h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: 2.5rem;
+    text-align: center;
+    margin-bottom: 3rem;
+}
+
+.about-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+    align-items: center;
+}
+
+.about-content img {
+    width: 100%;
+    border-radius: 15px;
+}
+
+/* Menu */
+.menu {
+    padding: 5rem 2rem;
+    background-color: var(--background);
+}
+
+.menu-grid {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+}
+
+.menu-item {
+    background-color: var(--card);
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.menu-item:hover {
+    transform: translateY(-5px);
+}
+
+.menu-item img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.menu-item h3 {
+    font-family: 'Playfair Display', serif;
+    font-weight: 600;
+    margin: 1rem;
+    color: var(--card-foreground);
+}
+
+.menu-item p {
+    margin: 0 1rem 1rem;
+    color: var(--muted-foreground);
+}
+
+/* Location */
+.location {
+    padding: 5rem 2rem;
+    background-color: var(--coffee-light);
+    color: var(--foreground);
+}
+
+.location-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+}
+
+.map-placeholder {
+    background-color: var(--secondary);
+    height: 300px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 15px;
+}
+
+/* Contact */
+.contact {
+    padding: 5rem 2rem;
+    background-color: var(--background);
+}
+
+.contact form {
+    max-width: 600px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.contact input, .contact textarea {
+    padding: 1rem;
+    border: 1px solid var(--border);
+    border-radius: 5px;
+    font-family: 'Poppins', sans-serif;
+    background-color: var(--input);
+    color: var(--foreground);
+}
+
+.contact textarea {
+    height: 150px;
+    resize: vertical;
+}
+
+/* Footer */
+footer {
+    background-color: var(--coffee-dark);
+    color: var(--primary-foreground);
+    text-align: center;
+    padding: 2rem;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .nav-links {
+        display: none;
+    }
+    
+    .hero-content h1 {
+        font-size: 2.5rem;
+    }
+    
+    .about-content, .location-content {
+        grid-template-columns: 1fr;
+    }
 }
